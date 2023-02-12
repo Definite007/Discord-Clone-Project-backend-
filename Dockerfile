@@ -1,7 +1,7 @@
 FROM gcr.io/distroless/nodejs:16 as builder
 WORKDIR '/app'
 COPY . .
-RUN ["/bin/bash", "-c", "npm install"]
+RUN npm install
 # lets build the application
 RUN ["/bin/bash", "-c", "npm run build"]
 FROM nginx
