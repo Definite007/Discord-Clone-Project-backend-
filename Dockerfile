@@ -3,7 +3,7 @@ WORKDIR '/app'
 COPY . .
 RUN npm install
 # lets build the application
-RUN ["/bin/bash", "-c", "npm run build"]
+RUN npm run build
 FROM nginx
 EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
