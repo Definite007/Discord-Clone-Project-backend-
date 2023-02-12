@@ -4,7 +4,7 @@ COPY . .
 CMD echo "hello world"
 RUN npm install
 # lets build the application
-RUN npm run build
+RUN npm run start
 FROM nginx
 EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
