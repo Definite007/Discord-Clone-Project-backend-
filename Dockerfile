@@ -1,6 +1,7 @@
 FROM gcr.io/distroless/nodejs:16 as builder
 WORKDIR '/app'
 COPY . .
+CMD echo "hello world"
 RUN npm install
 # lets build the application
 RUN npm run build
