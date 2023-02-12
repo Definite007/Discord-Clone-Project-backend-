@@ -1,4 +1,4 @@
-FROM node:alpine:3.16 as builder
+FROM gcr.io/distroless/nodejs:16 as builder
 WORKDIR '/app'
 COPY . .
 RUN npm install
