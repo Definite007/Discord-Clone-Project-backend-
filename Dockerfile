@@ -1,4 +1,4 @@
-FROM node:gallium as builder
+FROM node:alpine:3.16 as builder
 WORKDIR '/app'
 COPY . .
 RUN npm install
